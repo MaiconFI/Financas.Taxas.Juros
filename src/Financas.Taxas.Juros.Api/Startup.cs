@@ -61,7 +61,6 @@ namespace Financas.Taxas.Juros.Api
                 s.AssumeDefaultVersionWhenUnspecified = true;
 
                 s.Conventions.Controller<TaxaDeJurosV1Controller>().HasApiVersion(new ApiVersion(1, 0));
-                //s.Conventions.Controller<TaxaDeJurosV2Controller>().HasApiVersion(new ApiVersion(2, 0));
             });
 
             services.AddVersionedApiExplorer(options => options.GroupNameFormat = "'v'VVV");
