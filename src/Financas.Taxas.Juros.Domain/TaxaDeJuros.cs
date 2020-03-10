@@ -6,7 +6,7 @@ namespace Financas.Taxas.Juros.Domain
     {
         public TaxaDeJuros(decimal valor)
         {
-            SetValor(valor);
+            Valor = valor;
         }
 
         protected TaxaDeJuros()
@@ -14,16 +14,5 @@ namespace Financas.Taxas.Juros.Domain
         }
 
         public decimal Valor { get; private set; }
-
-        private void SetValor(decimal valor)
-        {
-            if (valor <= default(decimal))
-            {
-                AddError("O valor dever ser maior que zero.");
-                return;
-            }
-
-            Valor = valor;
-        }
     }
 }
