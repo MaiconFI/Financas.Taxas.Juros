@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Financas.Taxas.Juros.Data\Financas.Taxas.Juros.Data.csproj" />
+    <ProjectReference Include="..\Financas.Taxas.Juros.Domain\Financas.Taxas.Juros.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

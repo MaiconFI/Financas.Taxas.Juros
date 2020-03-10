@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="MediatR" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Financas.Taxas.Juros.Domain\Financas.Taxas.Juros.Domain.csproj" />
+    <ProjectReference Include="..\Financas.Taxas.Juros.Dtos\Financas.Taxas.Juros.Dtos.csproj" />
+  </ItemGroup>
+
+</Project>
