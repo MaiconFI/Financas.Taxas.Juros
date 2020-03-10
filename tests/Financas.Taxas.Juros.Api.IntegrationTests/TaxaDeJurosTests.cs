@@ -20,7 +20,7 @@ namespace Financas.Taxas.Juros.Api.IntegrationTests
         [Fact]
         public async Task GetTaxDeJurosBasica()
         {
-            var resultadoEsperado = new TaxaDeJurosDto() { Valor = TaxaDeJurosBasica.ValorDaTaxa };
+            var resultadoEsperado = new TaxaDeJurosDto() { Valor = TaxaDeJurosPadrao.ValorDaTaxa };
             var client = _factory.CreateClient();
 
             var response = await client.GetAsync("/v1/taxadejuros");

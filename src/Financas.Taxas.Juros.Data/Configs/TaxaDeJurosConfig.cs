@@ -14,6 +14,7 @@ namespace Financas.Taxas.Juros.Data.Configs
             builder.Property(x => x.Valor).IsRequired();
 
             builder.HasDiscriminator<short>("Discriminator")
+                .HasValue<TaxaDeJurosPadrao>(TaxaDeJurosPadrao.Discriminator)
                 .HasValue<TaxaDeJurosBasica>(TaxaDeJurosBasica.Discriminator);
         }
     }

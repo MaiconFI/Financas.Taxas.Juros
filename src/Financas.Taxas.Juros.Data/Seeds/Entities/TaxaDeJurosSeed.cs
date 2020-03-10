@@ -15,7 +15,9 @@ namespace Financas.Taxas.Juros.Data.Seeds.Entities
 
         public async Task ExecuteAsync()
         {
+            var taxaDeJurosPadrao = new TaxaDeJurosPadrao();
             var taxaDeJurosBasica = new TaxaDeJurosBasica();
+            await _taxaDeJurosContext.TaxasDeJuros.AddAsync(taxaDeJurosPadrao);
             await _taxaDeJurosContext.TaxasDeJuros.AddAsync(taxaDeJurosBasica);
         }
     }

@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace Financas.Taxas.Juros.Queries.TaxasDeJuros
 {
-    public class TaxaDeJurosBasicaQueryHandler : IRequestHandler<TaxaDeJurosBasicaQuery, TaxaDeJurosDto>
+    public class TaxaDeJurosPadraoQueryHandler : IRequestHandler<TaxaDeJurosPadraoQuery, TaxaDeJurosDto>
     {
         private readonly IMapper _mapper;
         private readonly ITaxaDeJurosRepository _taxaDeJurosRepository;
 
-        public TaxaDeJurosBasicaQueryHandler(IMapper mapper,
+        public TaxaDeJurosPadraoQueryHandler(IMapper mapper,
             ITaxaDeJurosRepository taxaDeJurosRepository)
         {
             _mapper = mapper;
             _taxaDeJurosRepository = taxaDeJurosRepository;
         }
 
-        public async Task<TaxaDeJurosDto> Handle(TaxaDeJurosBasicaQuery request, CancellationToken cancellationToken)
+        public async Task<TaxaDeJurosDto> Handle(TaxaDeJurosPadraoQuery request, CancellationToken cancellationToken)
         {
-            var taxaDeJurosBasica = await _taxaDeJurosRepository.GetTaxaDeJurosAsync<TaxaDeJurosBasica>();
+            var taxaDeJurosBasica = await _taxaDeJurosRepository.GetTaxaDeJurosAsync<TaxaDeJurosPadrao>();
             return _mapper.Map<TaxaDeJurosDto>(taxaDeJurosBasica);
         }
     }

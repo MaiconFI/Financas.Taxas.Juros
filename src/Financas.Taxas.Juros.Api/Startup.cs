@@ -90,7 +90,7 @@ namespace Financas.Taxas.Juros.Api
             services.AddSingleton(mapper);
 
             IocDomainRepositories.Register(services);
-            services.AddMediatR(typeof(TaxaDeJurosBasicaQueryHandler).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(TaxaDeJurosPadraoQueryHandler).GetTypeInfo().Assembly);
         }
 
         private void MigrateDatabase(IServiceCollection services)

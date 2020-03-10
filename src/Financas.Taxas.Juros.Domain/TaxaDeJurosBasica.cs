@@ -2,8 +2,8 @@
 {
     public class TaxaDeJurosBasica : TaxaDeJuros
     {
-        public const short Discriminator = 1;
-        public const decimal ValorDaTaxa = 0.01M;
+        public const short Discriminator = 2;
+        public const decimal ValorDaTaxa = 4.25M;
 
         public TaxaDeJurosBasica()
             : base(ValorDaTaxa)

@@ -20,7 +20,7 @@ namespace Financas.Taxas.Juros.Api.Controllers.ApiV1
         [HttpGet]
         public async Task<IActionResult> GetAsync(CancellationToken cancellationToken)
         {
-            return TratarRetorno(await _mediator.Send(new TaxaDeJurosBasicaQuery(), cancellationToken));
+            return TratarRetorno(await _mediator.Send(new TaxaDeJurosPadraoQuery(), cancellationToken));
         }
     }
 }
