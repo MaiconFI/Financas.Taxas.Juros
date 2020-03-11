@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  financas.taxas.juros.api:
+    image: ${DOCKER_REGISTRY-}financastaxasjurosapi
+    build:
+      context: .
+      dockerfile: src/Financas.Taxas.Juros.Api/Dockerfile

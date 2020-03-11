@@ -8,6 +8,11 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["src/Financas.Taxas.Juros.Api/Financas.Taxas.Juros.Api.csproj", "src/Financas.Taxas.Juros.Api/"]
+COPY ["src/Financas.Taxas.Juros.Queries/Financas.Taxas.Juros.Queries.csproj", "src/Financas.Taxas.Juros.Queries/"]
+COPY ["src/Financas.Taxas.Juros.Domain/Financas.Taxas.Juros.Domain.csproj", "src/Financas.Taxas.Juros.Domain/"]
+COPY ["src/Financas.Taxas.Juros.Dtos/Financas.Taxas.Juros.Dtos.csproj", "src/Financas.Taxas.Juros.Dtos/"]
+COPY ["src/Financas.Taxas.Juros.Data/Financas.Taxas.Juros.Data.csproj", "src/Financas.Taxas.Juros.Data/"]
+COPY ["src/Financas.Taxas.Juros.Domain.Repositories/Financas.Taxas.Juros.Domain.Repositories.csproj", "src/Financas.Taxas.Juros.Domain.Repositories/"]
 RUN dotnet restore "src/Financas.Taxas.Juros.Api/Financas.Taxas.Juros.Api.csproj"
 COPY . .
 WORKDIR "/src/src/Financas.Taxas.Juros.Api"

@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financas.Taxas.Juros.Dtos",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financas.Taxas.Juros.Api.IntegrationTests", "tests\Financas.Taxas.Juros.Api.IntegrationTests\Financas.Taxas.Juros.Api.IntegrationTests.csproj", "{A14EDD0D-B05F-49E9-92F2-0E7DB829B838}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financas.Taxas.Juros.Queries.Tests", "tests\Financas.Taxas.Juros.Queries.Tests\Financas.Taxas.Juros.Queries.Tests.csproj", "{020B71AE-0322-4860-A8FC-97E9B43D8C30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financas.Taxas.Juros.Queries.Tests", "tests\Financas.Taxas.Juros.Queries.Tests\Financas.Taxas.Juros.Queries.Tests.csproj", "{020B71AE-0322-4860-A8FC-97E9B43D8C30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financas.Taxas.Juros.Domain.Tests", "tests\Financas.Taxas.Juros.Domain.Tests\Financas.Taxas.Juros.Domain.Tests.csproj", "{FDB23FEB-71A6-4F5D-8337-6E273DFD8D49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financas.Taxas.Juros.Domain.Tests", "tests\Financas.Taxas.Juros.Domain.Tests\Financas.Taxas.Juros.Domain.Tests.csproj", "{FDB23FEB-71A6-4F5D-8337-6E273DFD8D49}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{61B09398-AB3E-488C-9DFC-5478B72F59F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{FDB23FEB-71A6-4F5D-8337-6E273DFD8D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDB23FEB-71A6-4F5D-8337-6E273DFD8D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDB23FEB-71A6-4F5D-8337-6E273DFD8D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B09398-AB3E-488C-9DFC-5478B72F59F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B09398-AB3E-488C-9DFC-5478B72F59F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B09398-AB3E-488C-9DFC-5478B72F59F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B09398-AB3E-488C-9DFC-5478B72F59F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
