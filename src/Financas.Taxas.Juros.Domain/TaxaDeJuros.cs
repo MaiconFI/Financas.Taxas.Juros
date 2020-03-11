@@ -1,4 +1,5 @@
 ﻿using Financas.Taxas.Juros.Domain.Base;
+using System;
 
 namespace Financas.Taxas.Juros.Domain
 {
@@ -6,13 +7,17 @@ namespace Financas.Taxas.Juros.Domain
     {
         public TaxaDeJuros(decimal valor)
         {
+            ValidarValor(valor);
+
             Valor = valor;
         }
 
-        protected TaxaDeJuros()
-        {
-        }
-
         public decimal Valor { get; private set; }
+
+        private void ValidarValor(decimal valor)
+        {
+            if (valor < default(decimal))
+                throw new ArgumentException("O valo deve ser maior quer zero");
+        }
     }
 }
