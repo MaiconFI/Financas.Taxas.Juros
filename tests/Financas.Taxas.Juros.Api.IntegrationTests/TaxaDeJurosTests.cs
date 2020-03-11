@@ -17,13 +17,14 @@ namespace Financas.Taxas.Juros.Api.IntegrationTests
             _factory = factory;
         }
 
-        [Fact]
-        public async Task GetTaxDeJurosBasica()
+        [Theory]
+        [InlineData("/v1/taxadejuros")]
+        public async Task DeveRetornarATaxaDeJurosPadrao(string url)
         {
             var resultadoEsperado = new TaxaDeJurosDto() { Valor = TaxaDeJurosPadrao.ValorDaTaxa };
             var client = _factory.CreateClient();
 
-            var response = await client.GetAsync("/v1/taxadejuros");
+            var response = await client.GetAsync(url);
             response.EnsureSuccessStatusCode();
             var xpto = await response.Content.ReadAsStringAsync();
             var resultado = JsonSerializer.Deserialize<TaxaDeJurosDto>(xpto);

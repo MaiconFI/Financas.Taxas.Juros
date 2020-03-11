@@ -14,7 +14,7 @@ namespace Financas.Taxas.Juros.Queries.Tests
     public class TaxaDeJurosPadraoQueryHandlerTests
     {
         [Fact]
-        public async void DeveRetornarATaxaDeJurosBasica()
+        public async void Handler_DeveRetornarATaxaDeJurosPadrao()
         {
             var context = GetContext();
             var repository = new TaxaDeJurosRepository(context);
