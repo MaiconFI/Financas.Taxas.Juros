@@ -1,4 +1,4 @@
-using System;
+using System.Linq;
 using Xunit;
 
 namespace Financas.Taxas.Juros.Domain.Tests
@@ -6,11 +6,12 @@ namespace Financas.Taxas.Juros.Domain.Tests
     public class TaxaDeJurosTests
     {
         [Fact]
-        public void TaxaDeJuros_DeveDispararExcecaoQuandoValorMenorQueZero()
+        public void TaxaDeJuros_DeveConterErrosQuandoValorMenorQueZero()
         {
-            static void acao() => new TaxaDeJurosInvalida();
+            var taxaDeJurosInvalida = new TaxaDeJurosInvalida();
 
-            Assert.Throws<ArgumentException>(acao);
+            Assert.True(taxaDeJurosInvalida.Errors.Any());
+            Assert.Equal(default, taxaDeJurosInvalida.Valor);
         }
 
         [Fact]

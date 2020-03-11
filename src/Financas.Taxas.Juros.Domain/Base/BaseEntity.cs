@@ -2,7 +2,7 @@
 
 namespace Financas.Taxas.Juros.Domain.Base
 {
-    public abstract class BaseEntity
+    public abstract class BaseEntity : BaseError
     {
         public BaseEntity()
         {

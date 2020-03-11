@@ -1,5 +1,4 @@
 ﻿using Financas.Taxas.Juros.Domain.Base;
-using System;
 
 namespace Financas.Taxas.Juros.Domain
 {
@@ -9,6 +8,8 @@ namespace Financas.Taxas.Juros.Domain
         {
             ValidarValor(valor);
 
+            if (!IsValid()) return;
+
             Valor = valor;
         }
 
@@ -17,7 +18,7 @@ namespace Financas.Taxas.Juros.Domain
         private void ValidarValor(decimal valor)
         {
             if (valor < default(decimal))
-                throw new ArgumentException("O valo deve ser maior quer zero");
+                AddError("O valo deve ser maior quer zero");
         }
     }
 }
