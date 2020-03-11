@@ -17,7 +17,7 @@ namespace Financas.Taxas.Juros.Domain
 
         private void ValidarValor(decimal valor)
         {
-            if (valor < default(decimal))
+            if (valor <= default(decimal))
                 AddError("O valo deve ser maior quer zero");
         }
     }
