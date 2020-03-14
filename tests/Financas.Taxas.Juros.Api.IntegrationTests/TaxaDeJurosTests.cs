@@ -1,7 +1,6 @@
 using Financas.Taxas.Juros.Domain;
 using Financas.Taxas.Juros.Dtos;
 using Microsoft.AspNetCore.Mvc.Testing;
-using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Xunit;
@@ -18,7 +17,7 @@ namespace Financas.Taxas.Juros.Api.IntegrationTests
         }
 
         [Theory]
-        [InlineData("/v1/taxadejuros")]
+        [InlineData("/v1/taxaJuros")]
         public async Task DeveRetornarATaxaDeJurosPadrao(string url)
         {
             var resultadoEsperado = new TaxaDeJurosDto() { Valor = TaxaDeJurosPadrao.ValorDaTaxa };
@@ -30,7 +29,6 @@ namespace Financas.Taxas.Juros.Api.IntegrationTests
             var resultado = JsonSerializer.Deserialize<TaxaDeJurosDto>(xpto);
 
             Assert.Equal(resultadoEsperado.Valor, resultado.Valor);
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
     }
 }
