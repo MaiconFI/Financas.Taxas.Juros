@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Financas.Taxas.Juros.Api.Controllers.ApiV1
 {
-    [Route("v{version:apiVersion}/taxadejuros")]
+    [Route("v{version:apiVersion}/taxaJuros")]
     public class TaxaDeJurosV1Controller : ApiV1BaseController
     {
         private readonly IMediator _mediator;
