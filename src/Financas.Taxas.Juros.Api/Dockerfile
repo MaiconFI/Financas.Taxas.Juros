@@ -16,10 +16,10 @@ COPY ["src/Financas.Taxas.Juros.Domain.Repositories/Financas.Taxas.Juros.Domain.
 RUN dotnet restore "src/Financas.Taxas.Juros.Api/Financas.Taxas.Juros.Api.csproj"
 COPY . .
 WORKDIR "/src/src/Financas.Taxas.Juros.Api"
-RUN dotnet build "Financas.Taxas.Juros.Api.csproj" -c Release -o /app/build
+RUN dotnet build "Financas.Taxas.Juros.Api.csproj" --no-restore -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Financas.Taxas.Juros.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "Financas.Taxas.Juros.Api.csproj" --no-restore -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
